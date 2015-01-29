@@ -9,7 +9,7 @@ For numbers which are multiples of both three and five print 'FizzBuzz'.
 
 References: 
 """
-for x in range(1,100):
+for x in range(1,101):
 	if x % 3 == 0 and not x % 5 == 0: # If x is a multiple of 3, but not a multiple of 5.
 		print "Fizz"
 	elif x % 5 == 0 and not x % 3 == 0: # If x is a multiple of 5, but not a multiple of 3.
