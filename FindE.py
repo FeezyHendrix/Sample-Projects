@@ -18,15 +18,14 @@ for x in range(2,50):
 	factorial *= x
 	e += decimal.Decimal(1.0)/decimal.Decimal(factorial)
 
-# Now that e has been determined, it can be used in a function that allows the user to determine the number of decimal places.
-def finddec():
+# Now that e has been determined, it can be used in a way that allows the user to determine the number of decimal places.
+
+result = int(raw_input("Please enter how many decimal places you would like returned for e:"))
+while result > 20:
+	print "Sorry, cannot compute numbers greater than 20."
+	# The code below lets the user enter another number; although it does seem wasteful.
 	result = int(raw_input("Please enter how many decimal places you would like returned for e:"))
-	while result > 20:
-			print "Sorry, cannot compute numbers greater than 20."
-			# The code below lets the user enter another number; although it does seem wasteful.
-			result = int(raw_input("Please enter how many decimal places you would like returned for e:"))
-	else:
-		# The line below prints e as a string and slices the output using the result variable. '+2' is used as a quick trick to 
-		# incorporate the beginning two characters of '2.'
-		print str(e)[0:result+2]
-finddec()
+else:
+	# The line below prints e as a string and slices the output using the result variable. '+2' is used as a quick trick to 
+	# incorporate the beginning two characters of '2.'
+	print str(e)[0:result+2]
