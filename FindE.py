@@ -23,7 +23,7 @@ for x in range(2,50):
 result = int(raw_input("Please enter how many decimal places you would like returned for e:"))
 while result > 20:
 	print "Sorry, cannot compute numbers greater than 20."
-	# The code below lets the user enter another number; although it does seem wasteful.
+	# The code below lets the user enter another number, although it does seem wasteful.
 	result = int(raw_input("Please enter how many decimal places you would like returned for e:"))
 else:
 	# The line below prints e as a string and slices the output using the result variable. '+2' is used as a quick trick to 
