@@ -9,7 +9,7 @@ Keep a limit to how far the program will go.
 References: 
 """
 def palindrome():
-	givenword = str(raw_input("Please enter the word you would to have checked:"))
+	givenword = str(raw_input("Please enter the word you would like to have checked:"))
 	while not givenword.isalpha(): # Checks to make sure all characters are alpha characters
 		print "Please enter a real word."
 		givenword = str(raw_input("Please enter the word you would to have checked:"))
