@@ -14,7 +14,7 @@ def palindrome():
 		print "Please enter a real word."
 		givenword = str(raw_input("Please enter the word you would to have checked:"))
 	else:
-		if givenword == givenword[::-1]: # Using an extended index to determine if the word given matches its reverse
+		if givenword == givenword[::-1]: # An extended index slice determines if the word given matches its reverse
 			print "Your word is a palindrome."
 		else:
 			print "Your word is not a palindrome."
