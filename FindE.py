@@ -13,7 +13,7 @@ References: http://mathworld.wolfram.com/e.html; https://docs.python.org/2/libra
 import decimal # The decimal module is imported since it performs better than float()
 factorial = 1 # The factorial is defined as 1 in order to find e from a nested series.
 e = 2 # e is defined as 2 in order to begin the sequence of 2.xxxx.
-for x in range(2,50):
+for x in range(2,50): # The larger the range, the higher degree of accuracy for euler's number.
 	# The two lines below perform the nested series calculation in order to find e.
 	factorial *= x
 	e += decimal.Decimal(1.0)/decimal.Decimal(factorial)
