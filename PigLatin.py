@@ -15,9 +15,8 @@ while not oldword.isalpha(): # Checks to make sure that the input word is a real
 	oldword = str(raw_input("Please enter a word to be translated:"))
 
 else:
-	# Prints a new word that is formed from slices of the input word.
 	if oldword[0] not in 'aeiouAEIOU': # Checks input word to see if first letter is a consonant
-		newword = oldword[1:len(oldword)] + oldword[0] + 'ay'
+		newword = oldword[1:len(oldword)] + oldword[0] + 'ay' # Using index slices to return the correct letters
 	else:
 		newword = oldword + 'ay' # If the first letter is a vowel, then only the 'ay' ending is adding.
-	print newword.capitalize()
+	print newword.capitalize() # Captalizes the first letter of the word
