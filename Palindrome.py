@@ -6,7 +6,7 @@ Date: 1/30/2015
 Problem: Checks if the string entered by the user is a palindrome.
 That is that it reads the same forwards as backwards like “racecar”.
 
-References: 
+References: https://docs.python.org/2.3/whatsnew/section-slices.html
 """
 def palindrome():
 	givenword = str(raw_input("Please enter the word you would like to have checked:"))
