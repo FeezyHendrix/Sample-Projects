@@ -16,5 +16,8 @@ while not oldword.isalpha(): # Checks to make sure that the input word is a real
 
 else:
 	# Prints a new word that is formed from slices of the input word.
-	newword = oldword[1:len(oldword)] + oldword[0] + 'ay'
+	if oldword[0] not in 'aeiouAEIOU':
+		newword = oldword[1:len(oldword)] + oldword[0] + 'ay'
+	else:
+		newword = oldword + 'ay'
 	print newword.capitalize()
