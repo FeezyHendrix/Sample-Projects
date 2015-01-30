@@ -12,7 +12,7 @@ def palindrome():
 	givenword = str(raw_input("Please enter the word you would like to have checked:"))
 	while not givenword.isalpha(): # Checks to make sure all characters are alpha characters
 		print "Please enter a real word."
-		givenword = str(raw_input("Please enter the word you would to have checked:"))
+		givenword = str(raw_input("Please enter the word you would like to have checked:"))
 	else:
 		if givenword == givenword[::-1]: # An extended index slice determines if the word given matches its reverse
 			print "Your word is a palindrome."
