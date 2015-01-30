@@ -7,10 +7,10 @@ Problem: Just like the previous problem, but with e instead of Pi.
 Enter a number and have the program generate e up to that many decimal places. 
 Keep a limit to how far the program will go.
 
-References: http://mathworld.wolfram.com/e.html
+References: http://mathworld.wolfram.com/e.html; https://docs.python.org/2/library/decimal.html
+
 """
 import decimal # The decimal module is imported since it performs better than float()
-
 factorial = 1 # The factorial is defined as 1 in order to find e from a nested series.
 e = 2 # e is defined as 2 in order to begin the sequence of 2.xxxx.
 for x in range(2,50):
