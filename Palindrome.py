@@ -1,5 +1,5 @@
 """
-Project: Sample Project from Projects Repo - Check if Palindrome
+Project: Projects Repo - Check if Palindrome
 Author: Mandeep Bhutani
 Date: 1/30/2015
 
