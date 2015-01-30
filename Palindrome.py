@@ -1,10 +1,10 @@
 """
-Project: Sample Project from Projects Repo
+Project: Sample Project from Projects Repo - Check if Palindrome
 Author: Mandeep Bhutani
 Date: 1/30/2015
 
-Problem: Enter a number and have the program generate PI up to that many decimal places.
-Keep a limit to how far the program will go.
+Problem: Checks if the string entered by the user is a palindrome.
+That is that it reads the same forwards as backwards like “racecar”.
 
 References: 
 """
