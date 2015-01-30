@@ -16,8 +16,8 @@ while not oldword.isalpha(): # Checks to make sure that the input word is a real
 
 else:
 	# Prints a new word that is formed from slices of the input word.
-	if oldword[0] not in 'aeiouAEIOU':
+	if oldword[0] not in 'aeiouAEIOU': # Checks input word to see if first letter is a consonant
 		newword = oldword[1:len(oldword)] + oldword[0] + 'ay'
 	else:
-		newword = oldword + 'ay'
+		newword = oldword + 'ay' # If the first letter is a vowel, then only the 'ay' ending is adding.
 	print newword.capitalize()
