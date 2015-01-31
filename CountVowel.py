@@ -1,14 +1,9 @@
 """
-Project: Projects Repo - Count Vowels
-
+Title: Projects Repo - Count Vowels
 Author: Mandeep Bhutani
-
 Date: 1/31/2015
-
 Problem: Enter a string and the program counts the number of vowels in the text. 
-For added complexity have it report a sum of each vowel found.
-
-References: 
+		 For added complexity have it report a sum of each vowel found.
 """
 result = str(raw_input("Please enter text in order to count the number of vowels:"))
 total = 0 
