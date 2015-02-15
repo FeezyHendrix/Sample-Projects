@@ -3,7 +3,7 @@ Title: 46 Simple Python Exercises
 Author: Mandeep Bhutani
 Date: 2/14/2015
 
-Description: A collection of 46 exercises taken from
+Description: A collection of exercises taken from
 http://www.ling.gu.se/~lager/python_exercises.html
 """
 
@@ -146,3 +146,15 @@ def pangram(input_sentence):
         return True
     else:
         return False
+
+
+#  Write a Python program capable of generating all the verses of the song,
+# "99 Bottles of Beer"
+
+def bottles(n):
+    while n > 0:
+        print "There are %s bottles of beer on the wall, \
+        %s bottles of beer." % (n, n)
+        print "Take one down, pass it around %s bottles \
+        of beer on the wall." % (n - 1)
+        n -= 1
