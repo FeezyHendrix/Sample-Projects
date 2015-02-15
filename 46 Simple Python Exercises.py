@@ -153,8 +153,8 @@ def pangram(input_sentence):
 
 def bottles(n):
     while n > 0:
-        print "There are %s bottles of beer on the wall, \
-        %s bottles of beer." % (n, n)
-        print "Take one down, pass it around %s bottles \
-        of beer on the wall." % (n - 1)
+        print "There are %s bottles of beer on the wall, %s bottles of beer." \
+            % (n, n)
+        print "Take one down, pass it around, %s bottles of beer on the wall."\
+            % (n - 1)
         n -= 1
