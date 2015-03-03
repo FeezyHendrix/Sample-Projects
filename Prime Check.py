@@ -9,8 +9,9 @@ from math import sqrt
 
 
 def is_prime(n):
-    for x in range(2, int(sqrt(n))):
+    for x in range(2, n):
         if n % x == 0:
             return False
     else:
         return True
+print is_prime(9)
