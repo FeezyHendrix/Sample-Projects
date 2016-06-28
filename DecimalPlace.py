@@ -10,11 +10,11 @@ import mpmath
 
 
 def find_pi_decimal():
-    result = int(input("Please enter how many decimal places you would like returned for Pi:"))
+    result = int(input("Please enter how many decimal places you would like returned for Pi: "))
     mpmath.mp.dps = result
     while result > 1000:
-            print("Sorry, cannot compute numbers greater than 1000.")
-            result = int(input("Please enter how many decimal places you would like returned for Pi:"))
+            print("Sorry, cannot compute fractional part greater than 1000.")
+            result = int(input("Please enter how many decimal places you would like returned for Pi: "))
     else:
         # The result+2 slice is a trick to account for '3.', the first two characters of Pi.
         return str(mpmath.pi)[:result+2]
