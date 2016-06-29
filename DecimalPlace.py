@@ -16,19 +16,20 @@ from decimal import Decimal, getcontext
 
 
 def bailey_borwein_plouffe(precision):
-    getcontext().prec = precision  # getcontext.prec() defines the length of Pi
+    """The precision argument defines the length of Pi."""
+    getcontext().prec = precision
     formula = sum(1 / Decimal(16) ** k * (Decimal(4) / (8 * k + 1) -
                                           Decimal(2) / (8 * k + 4) -
                                           Decimal(1) / (8 * k + 5) -
                                           Decimal(1) / (8 * k + 6))
-                  for k in range(1000))
+                  for k in range(precision))
     return formula
 
 
 def find_pi_decimals():
     decimal_places = int(input("Please enter how many decimal places you would like returned for Pi: "))
-    while decimal_places > 10000:
-            print("Sorry, cannot compute fractional part greater than 10,000.")
+    while decimal_places > 1000:
+            print("Sorry, cannot compute fractional part greater than 1,000.")
             decimal_places = int(input("Please enter how many decimal places you would like returned for Pi: "))
     # By adding 1 to decimal_places we account for '3', the integer part of Pi.
     return bailey_borwein_plouffe(decimal_places + 1)
