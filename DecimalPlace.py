@@ -5,17 +5,33 @@ Date: 1/28/2015
 
 Problem: Enter a number and have the program generate Pi up to
 that many decimal places. Keep a limit to how far the program will go.
+
+Analysis: The use of the bailey-borwein-plouffe formula allows for the quick
+calculation of Pi to the nth digit. The user is constrained to 10,000 decimal
+places of Pi as required by the problem.
+
+References: https://en.wikipedia.org/wiki/Bailey-Borwein-Plouffe_formula
 """
-import mpmath
+from decimal import Decimal, getcontext
 
 
-def find_pi_decimal():
-    result = int(input("Please enter how many decimal places you would like returned for Pi: "))
-    mpmath.mp.dps = result
-    while result > 1000:
-            print("Sorry, cannot compute fractional part greater than 1000.")
-            result = int(input("Please enter how many decimal places you would like returned for Pi: "))
+def bailey_borwein_plouffe(precision):
+    getcontext().prec = precision
+    formula = sum(1 / Decimal(16) ** k * (Decimal(4) / (8 * k + 1) -
+                                          Decimal(2) / (8 * k + 4) -
+                                          Decimal(1) / (8 * k + 5) -
+                                          Decimal(1) / (8 * k + 6))
+                  for k in range(1000))
+    return formula
+
+
+def find_pi_decimals():
+    decimal_places = int(input("Please enter how many decimal places you would like returned for Pi: "))
+    while decimal_places > 10000:
+            print("Sorry, cannot compute fractional part greater than 10000.")
+            decimal_places = int(input("Please enter how many decimal places you would like returned for Pi: "))
     else:
-        # The result+2 slice is a trick to account for '3.', the first two characters of Pi.
-        return str(mpmath.pi)[:result+2]
-print(find_pi_decimal())
+        # By adding 1 to decimal_places we account for '3', the integer part of Pi.
+        return str(bailey_borwein_plouffe(decimal_places + 1))
+
+print(find_pi_decimals())
