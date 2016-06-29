@@ -31,6 +31,6 @@ def find_pi_decimals():
             print("Sorry, cannot compute fractional part greater than 10,000.")
             decimal_places = int(input("Please enter how many decimal places you would like returned for Pi: "))
     # By adding 1 to decimal_places we account for '3', the integer part of Pi.
-    return str(bailey_borwein_plouffe(decimal_places + 1))
+    return bailey_borwein_plouffe(decimal_places + 1)
 
 print(find_pi_decimals())
