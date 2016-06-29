@@ -16,7 +16,7 @@ from decimal import Decimal, getcontext
 
 
 def bailey_borwein_plouffe(precision):
-    """The precision argument defines the length of Pi."""
+    """The precision argument is an integer that defines the length of Pi."""
     getcontext().prec = precision
     formula = sum(1 / Decimal(16) ** k * (Decimal(4) / (8 * k + 1) -
                                           Decimal(2) / (8 * k + 4) -
