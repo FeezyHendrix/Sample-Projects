@@ -1,5 +1,5 @@
 """
-Project: Sample Project from Projects Repo
+Project: Find Pi to the Nth Digit - Mega Projects List
 Author: Mandeep Bhutani
 Date: 1/28/2015
 
@@ -16,6 +16,7 @@ from decimal import Decimal, getcontext
 
 
 def bailey_borwein_plouffe(precision):
+    # getcontext.prec() defines the length of Pi
     getcontext().prec = precision
     formula = sum(1 / Decimal(16) ** k * (Decimal(4) / (8 * k + 1) -
                                           Decimal(2) / (8 * k + 4) -
