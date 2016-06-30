@@ -4,24 +4,25 @@ Author: Mandeep Bhutani
 Date: 2/13/2015
 Problem: Simulate a coin flip.
 """
-import random  # Module that will choose between heads or tails
+import random
 
 count_heads = 0
 count_tails = 0
 
-while True:  # While command loops until user no longer wishes to continue
+while True:
 
-    guess = random.choice([0, 1])  # Chooses between 0 and 1
-    play = str(raw_input("Would you like to flip a coin? Yes or No?"))
+    guess = random.choice([0, 1])  # Uses 0 and 1 as Heads and Tails
+    play = str(input("Would you like to flip a coin? Yes or No: "))
 
-    if play.lower() != "yes":
+    if play.lower() == "no":
+        print("The coin has flipped {} Heads and {} Tails."
+              .format(count_heads, count_tails))
         break
 
     if guess == 0:
         count_heads += 1
-        print "Heads"
+        print("Heads")
+
     else:
         count_tails += 1
-        print "Tails"
-    print "The coin has flipped %s Heads and %s Tails." \
-        % (count_heads, count_tails)
+        print("Tails")
