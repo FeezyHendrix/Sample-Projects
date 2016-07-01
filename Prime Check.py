@@ -1,7 +1,7 @@
 """
-Title: Prime Check
+Title: Mega Projects List - Prime Check
 Author: Mandeep Bhutani
-Date: 3/2/15
+Date: 03/02/15
 
 Description: Code determines whether or not the input number is a prime number.
 """
