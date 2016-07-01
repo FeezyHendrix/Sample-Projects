@@ -18,20 +18,31 @@ class CaesarCipher(object):
     def __init__(self):
         self.alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" * 2
 
-    def encode_cipher(self, message, key):
-        encoded_message = ""
+    def encrypt_message(self, message, key):
+        encrypted_message = ""
         for letter in message:
-            if letter in self.alphabet:
-                encoded_message += self.alphabet[self.alphabet.index(letter) + key]
+            if letter.upper() in self.alphabet:
+                encrypted_message += self.alphabet[self.alphabet.index(letter) + key]
             else:
-                encoded_message += letter
-        return encoded_message
+                encrypted_message += letter
+        return encrypted_message
 
-    def decode_cipher(self, message, key):
-        decoded_message = ""
+    def decrypt_message(self, message, key):
+        decrypted_message = ""
         for letter in message:
-            if letter in self.alphabet:
-                decoded_message += self.alphabet[self.alphabet.index(letter) - key]
+            if letter.upper() in self.alphabet:
+                decrypted_message += self.alphabet[self.alphabet.index(letter) - key]
             else:
-                decoded_message += letter
-        return decoded_message
+                decrypted_message += letter
+        return decrypted_message
+
+
+def main():
+    cipher = CaesarCipher()
+    task = str(input('Would you like to encrypt or decrypt your message? '))
+    message = str(input('Enter your message: '))
+    key = int(input('Enter your key (number between 1-25): '))
+    if task == 'encrypt':
+        return cipher.encrypt_message(message, key)
+    elif task == 'decrypt':
+        return cipher.decrypt_message(message, key)
