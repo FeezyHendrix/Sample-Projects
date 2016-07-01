@@ -1,5 +1,5 @@
 """
-Project: Sample Project from Projects Repo - Pig Latin
+Project: Mega Project List - Pig Latin
 Author: Mandeep Bhutani
 Date: 1/29/2015
 
