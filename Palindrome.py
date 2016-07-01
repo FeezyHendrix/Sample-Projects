@@ -1,7 +1,7 @@
 """
-Project: Projects Repo - Check if Palindrome
+Project: Mega Projects List - Check if Palindrome
 Author: Mandeep Bhutani
-Date: 1/30/2015
+Date: 01/30/2015
 
 Problem: Checks if the string entered by the user is a palindrome.
 References: https://docs.python.org/2.3/whatsnew/section-slices.html
