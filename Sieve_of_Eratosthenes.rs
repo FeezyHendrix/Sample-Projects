@@ -2,9 +2,9 @@
 use::std::collections::HashSet;
 
 
-fn sieve_of_erastosthenes(n: i32) -> HashSet<i32> {
-    let mut primes: HashSet<i32> = HashSet::new();
-    let mut multiples: HashSet<i32> = HashSet::new();
+fn sieve_of_erastosthenes(n: i64) -> HashSet<i64> {
+    let mut primes: HashSet<i64> = HashSet::new();
+    let mut multiples: HashSet<i64> = HashSet::new();
     for i in 2..n+1 {
         if !multiples.contains(&i) {
             primes.insert(i);
