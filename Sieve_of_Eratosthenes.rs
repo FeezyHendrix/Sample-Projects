@@ -1,4 +1,3 @@
-#![feature(step_by)] // Unstable features allows stepping through iterator
 use::std::collections::HashSet;
 
 
@@ -8,6 +7,6 @@ fn sieve_of_erastosthenes(n: i64) -> HashSet<i64> {
     for i in 2..n+1 {
         if !multiples.contains(&i) {
             primes.insert(i);
-            multiples.extend((i..n+1).step_by(i)) }} 
+            multiples.extend((i..n+1).filter(|x| x % i == 0)) }} 
     primes
 }
