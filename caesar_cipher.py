@@ -22,7 +22,7 @@ class CaesarCipher(object):
         encrypted_message = ""
         for letter in message:
             if letter.upper() in self.alphabet:
-                encrypted_message += self.alphabet[self.alphabet.index(letter) + key]
+                encrypted_message += self.alphabet[self.alphabet.index(letter.upper()) + key]
             else:
                 encrypted_message += letter
         return encrypted_message
@@ -31,7 +31,7 @@ class CaesarCipher(object):
         decrypted_message = ""
         for letter in message:
             if letter.upper() in self.alphabet:
-                decrypted_message += self.alphabet[self.alphabet.index(letter) - key]
+                decrypted_message += self.alphabet[self.alphabet.index(letter.upper()) - key]
             else:
                 decrypted_message += letter
         return decrypted_message
