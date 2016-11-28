@@ -43,6 +43,6 @@ def main():
     message = str(input('Enter your message: '))
     key = int(input('Enter your key (number between 1-25): '))
     if task == 'encrypt':
-        return cipher.encrypt_message(message, key)
+        print(cipher.encrypt_message(message, key))
     elif task == 'decrypt':
-        return cipher.decrypt_message(message, key)
+        print(cipher.decrypt_message(message, key))
